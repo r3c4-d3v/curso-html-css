@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#home .header {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 17px);
+}
+
+#home .header .logo-container {
+    display: flex;
+    width: 100%;
+}
+#home .header .header-logo {
+    width: 10%;
+    height: auto;
+}
+#home .header .menu {
+    display: flex;
+    width: 40%;
+}
+#home .header .menu-item {
+    margin-right: 10px;
+}
+#home .social-media {
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home {
+    background-color: tomato;
+}
+
+#home .banner {
+    height: 100vh;
+}
+
+#home .title {
+    color: white;
+}
+
+#home .subtitle {
+    color: yellow;
+}
+
+#home .description {
+    color: coral;
+}
