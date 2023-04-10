@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap");
 
+:root {
+   --color-font-light: #ffffff;
+   --color-font-dark: #000000;
+   --color-font-grey: #272727;
+   --color-font-highlight: #ff414f;
+
+   --gradient-primary-fallback: #ff42ae;
+   --gradient-primary: linear-gradient(90deg, rgba(255,64,80,1) 0%, rgba(254,100,133,1) 45%, rgba(255,67,176,1) 100%);
+   --gradient-primary-reverse: linear-gradient(180deg, rgba(255,64,80,1) 0%, rgba(254,100,133,1) 45%, rgba(255,67,176,1) 100%);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +20,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  font-weight: normal;
 }
 
 #home .header {
@@ -65,16 +78,47 @@ body {
   background: url(../images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#home .title {
-  color: white;
+#home .banner-container {
+  width: 100%;
+  max-width: clamp(90vw, 100vw ,70vw);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-#home .subtitle {
-  color: yellow;
+#home .banner .title {
+  color: var(--color-font-light);
+  font-size: clamp(13px, 5vw, 35px);
+  font-weight: normal;
+  padding-bottom: 30px;
 }
 
-#home .description {
-  color: coral;
+#home .banner .subtitle {
+  color: var(--color-font-light);
+  font-size: clamp(19px, 5vw, 48px);
+  font-weight: 600;
+}
+
+#home .banner .link {
+  transition: background-image 1s ease; 
+  color: var(--color-font-light);
+  font-size: 16px;
+  font-weight: bold;
+  background-image: var(--gradient-primary-fallback);
+  background-image: var(--gradient-primary);
+  padding: 10px 20px;
+  margin-top: 15px;
+  max-width: 200px;
+  align-self: center;
+  text-decoration: none;
+}
+
+
+#home .banner .link:hover {
+  background-image: var(--gradient-primary-reverse);
 }
