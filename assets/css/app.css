@@ -8,9 +8,8 @@
 
    --gradient-primary-fallback: #ff42ae;
    --gradient-primary: linear-gradient(90deg, rgba(255,64,80,1) 0%, rgba(254,100,133,1) 45%, rgba(255,67,176,1) 100%);
-   --gradient-primary-reverse: linear-gradient(180deg, rgba(255,64,80,1) 0%, rgba(254,100,133,1) 45%, rgba(255,67,176,1) 100%);
+   --gradient-primary-reverse: linear-gradient(-90deg, rgba(255,64,80,1) 0%, rgba(254,100,133,1) 45%, rgba(255,67,176,1) 100%);
 }
-
 
 * {
   margin: 0;
@@ -23,13 +22,20 @@ body {
   font-weight: normal;
 }
 
+#home {
+  background-color: tomato;
+  position: relative;
+  overflow: hidden;
+}
+
 #home .header {
   display: flex;
   justify-content: space-between;
-  width: calc(100vw - 17px);
-  position: sticky;
+  width: 100vw;
+  position: fixed;
   top: 0;
-  background-color: #377ae6;
+  left: 0;
+  background-color: transparent;
 }
 
 #home .header .logo-container {
@@ -39,14 +45,14 @@ body {
   padding-left: 5%;
 }
 #home .header .header-logo {
-  width: 20%;
+  width: 30%;
   height: auto;
 }
+
 #home .header .menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 40%;
 }
 
 #home .header .menu-item {
@@ -67,10 +73,12 @@ body {
   align-items: center;
   width: 100%;
   padding-right: 5%;
+  column-gap: 5px;
 }
 
-#home {
-  background-color: tomato;
+#home .social-media .link {
+  color: var(--color-font-light);
+  font-size: 18px
 }
 
 #home .banner {
@@ -118,7 +126,42 @@ body {
   text-decoration: none;
 }
 
-
 #home .banner .link:hover {
   background-image: var(--gradient-primary-reverse);
 }
+
+#home .about {
+  background-image: var(--gradient-primary-fallback);
+  background-image: var(--gradient-primary-reverse);
+}
+
+#home .about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10%;
+  color: var(--color-font-light);
+  user-select: none;
+}
+
+#home .about-container .title {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+#home .about-container .description {
+  padding: 70px 0 40px 0;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+#home .about-container .link {
+  padding: 12px 35px;
+  border: 2px solid var(--color-font-light);
+  text-decoration: none;
+  border-radius: 50px;
+  color: inherit;
+  align-self: flex-end;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
