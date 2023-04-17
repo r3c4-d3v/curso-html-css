@@ -10,7 +10,7 @@
 
   /* Cores de decoração */
   --color-decoration-light-grey: #ffe8eb;
-  
+
   /* Cores de plano de fundo */
   --color-background-light: #ffffff;
 
@@ -22,6 +22,12 @@
     rgba(254, 100, 133, 1) 45%,
     rgba(255, 67, 176, 1) 100%
   );
+  --gradient-primary-transparent: linear-gradient(
+    90deg,
+    rgba(255, 64, 80, 0.7) 0%,
+    rgba(254, 100, 133, 0.7) 45%,
+    rgba(255, 67, 176, 0.7) 100%
+  );
 
   --gradient-primary-reverse: linear-gradient(
     -90deg,
@@ -29,6 +35,8 @@
     rgba(254, 100, 133, 1) 45%,
     rgba(255, 67, 176, 1) 100%
   );
+
+  --font-size-title: 30px;
 }
 
 * {
@@ -168,7 +176,7 @@ body {
 }
 
 #home .about-container .title {
-  font-size: 30px;
+  font-size: var(--font-size-title);
   text-transform: capitalize;
 }
 
@@ -241,3 +249,105 @@ body {
   z-index: 1;
   position: relative;
 }
+
+#home .team {
+  width: 100%;
+  padding: 0 10%;
+  background-color: var(--color-background-light);
+}
+
+#home .team-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#home .team-title {
+  color: var(--color-font-dark);
+  padding-bottom: 60px;
+  font-size: var(--font-size-title);
+}
+
+#home .team-cards-container {
+  display: flex;
+  gap: 30px;
+}
+
+#home .team-cards {
+}
+
+#home .team-cards:hover .team-card > .team-member-infos-hover {
+  display: flex;
+}
+
+#home .team-cards:hover .team-card > .team-member-infos {
+  display: none;
+}
+
+#home .team-cards:hover .team-card > .team-card-image {
+  padding-bottom: 0;
+}
+
+#home .team-card {
+  position: relative;
+}
+
+#home .team-card-image {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  max-width: 370px;
+  aspect-ratio: 9/10;
+  border-radius: 6px;
+  padding-bottom: 15px;
+}
+
+#home .team-member-infos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#home .team-member-infos .team-member-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#home .team-member-infos .team-member-role {
+ color: var(--color-font-light-grey);
+}
+
+#home .team-member-infos-hover {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 6px;
+  background-image: var(--gradient-primary-transparent);
+  color: var(--color-font-light);
+}
+
+#home .team-member-infos-hover .team-member-infos-hover-container {
+
+}
+
+#home .team-member-infos-hover .team-member-name {
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+#home .team-member-infos-hover .team-member-role {
+}
+
+#home .team-member-infos-hover .team-members-social-media .fa-brands {
+  color: var(--color-font-light);
+}
+
+
+
