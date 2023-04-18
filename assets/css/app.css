@@ -56,6 +56,7 @@ body {
   overflow: hidden;
 }
 
+/* Header start */
 #home .header {
   display: flex;
   justify-content: space-between;
@@ -74,8 +75,9 @@ body {
   padding-left: 5%;
 }
 #home .header .header-logo {
-  width: 15%;
   height: auto;
+  color: var(--color-font-light);
+  font-weight: bold;
 }
 
 #home .header .menu {
@@ -96,7 +98,7 @@ body {
   color: #2596be;
 }
 
-#home .social-media {
+#home .header .social-media {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -105,14 +107,16 @@ body {
   column-gap: 5px;
 }
 
-#home .social-media .link {
+#home .header .social-media .link {
   color: var(--color-font-light);
   font-size: 18px;
 }
+/* Header ends */
 
+/* Banner start */
 #home .banner {
   height: 100vh;
-  background: url(../images/banner2.jpg);
+  background: url(../images/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -158,7 +162,9 @@ body {
 #home .banner .link:hover {
   background-image: var(--gradient-primary-reverse);
 }
+/* Banner ends */
 
+/* About start */
 #home .about {
   display: flex;
   flex-direction: column;
@@ -249,11 +255,14 @@ body {
   z-index: 1;
   position: relative;
 }
+/* About ends */
 
+/* Team starts */
 #home .team {
   width: 100%;
   padding: 0 10%;
   background-color: var(--color-background-light);
+  padding-bottom: 70px;
 }
 
 #home .team-container {
@@ -261,63 +270,44 @@ body {
   flex-direction: column;
 }
 
-#home .team-title {
+#home .team-container .title {
   color: var(--color-font-dark);
   padding-bottom: 60px;
   font-size: var(--font-size-title);
 }
 
-#home .team-cards-container {
+#home .team-container .cards-container {
   display: flex;
-  gap: 30px;
+  gap: 60px 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#home .team-cards {
-}
-
-#home .team-cards:hover .team-card > .team-member-infos-hover {
-  display: flex;
-}
-
-#home .team-cards:hover .team-card > .team-member-infos {
-  display: none;
-}
-
-#home .team-cards:hover .team-card > .team-card-image {
-  padding-bottom: 0;
-}
-
-#home .team-card {
+#home .cards-container .card {
   position: relative;
 }
 
-#home .team-card-image {
-  width: 100%;
-  height: 100%;
-  min-height: 360px;
-  max-width: 370px;
-  aspect-ratio: 9/10;
-  border-radius: 6px;
-  padding-bottom: 15px;
+#home .card:hover .cards-container .card .infos-hover {
+  display: flex;
 }
 
-#home .team-member-infos {
+#home .cards-container .card .image {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#home .cards-container .card .infos {
   display: flex;
+  visibility: visible;
   flex-direction: column;
   text-align: center;
 }
 
-#home .team-member-infos .team-member-name {
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-#home .team-member-infos .team-member-role {
- color: var(--color-font-light-grey);
-}
-
-#home .team-member-infos-hover {
+#home .cards-container .card .infos-hover {
   display: none;
   flex-direction: column;
   gap: 10px;
@@ -333,21 +323,35 @@ body {
   color: var(--color-font-light);
 }
 
-#home .team-member-infos-hover .team-member-infos-hover-container {
-
+#home .cards-container .card:hover > .infos {
+  visibility: hidden;
 }
 
-#home .team-member-infos-hover .team-member-name {
-   font-weight: bold;
-   text-transform: capitalize;
+#home .cards-container .card:hover > .infos-hover {
+  display: flex;
 }
 
-#home .team-member-infos-hover .team-member-role {
+#home .cards-container .card .infos .name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-#home .team-member-infos-hover .team-members-social-media .fa-brands {
+#home .cards-container .card .infos .role {
+  color: var(--color-font-light-grey);
+}
+
+#home .cards-container .card .infos-hover .name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#home .cards-container .card .infos-hover .social-media {
+  display: flex;
+  column-gap: 12px;
+}
+
+#home .cards-container .card .infos-hover .social-media .fa-brands {
   color: var(--color-font-light);
 }
-
-
-
+/* Team ends */
