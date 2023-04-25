@@ -1,0 +1,42 @@
+:root {
+    /* Cores de fontes */
+    --color-font-light: #ffffff;
+    --color-font-dark: #000000;
+    --color-font-grey: #272727;
+    --color-font-light-grey: #5f5f5f;
+    --color-font-highlight: #ff414f;
+    --color-font-pink: #ff4485;
+    --color-font-pink-highlight: #fe40ab;
+
+    /* Cores de decoração */
+    --color-decoration-light-grey: #ffe8eb;
+
+    /* Cores de plano de fundo */
+    --color-background-light: #ffffff;
+    --color-background-grey: #2b2b2b;
+
+    /* Gradientes */
+    --gradient-primary-fallback: #ff42ae;
+    --gradient-primary: linear-gradient(
+            90deg,
+            rgba(255, 64, 80, 1) 0%,
+            rgba(254, 100, 133, 1) 45%,
+            rgba(255, 67, 176, 1) 100%
+    );
+    --gradient-primary-transparent: linear-gradient(
+            90deg,
+            rgba(255, 64, 80, 0.7) 0%,
+            rgba(254, 100, 133, 0.7) 45%,
+            rgba(255, 67, 176, 0.7) 100%
+    );
+
+    --gradient-primary-reverse: linear-gradient(
+            -90deg,
+            rgba(255, 64, 80, 1) 0%,
+            rgba(254, 100, 133, 1) 45%,
+            rgba(255, 67, 176, 1) 100%
+    );
+
+    /* Font size*/
+    --font-size-title: 30px;
+}

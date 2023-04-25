@@ -1,0 +1,89 @@
+#home .team {
+    width: 100%;
+}
+
+#home .team-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#home .team-container .cards-container {
+    display: flex;
+    gap: 60px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#home .cards-container .card {
+    position: relative;
+}
+
+#home .card:hover .cards-container .card .infos-hover {
+    display: flex;
+}
+
+#home .cards-container .card .image {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#home .cards-container .card .infos {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    text-align: center;
+    pointer-events: none;
+}
+
+#home .cards-container .card .infos-hover {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 6px;
+    background-image: var(--gradient-primary-transparent);
+    color: var(--color-font-light);
+}
+
+#home .cards-container .card:hover > .infos {
+    visibility: hidden;
+}
+
+#home .cards-container .card:hover > .infos-hover {
+    display: flex;
+}
+
+#home .cards-container .card .infos .name {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+#home .cards-container .card .infos .role {
+    color: var(--color-font-light-grey);
+}
+
+#home .cards-container .card .infos-hover .name {
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+#home .cards-container .card .infos-hover .social-media {
+    display: flex;
+    column-gap: 12px;
+}
+
+#home .cards-container .card .infos-hover .social-media .fa-brands {
+    color: var(--color-font-light);
+}
