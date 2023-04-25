@@ -1,14 +1,14 @@
 .common-container-default {
-    padding: 60px 10%;
+    padding: 3.75rem 10%;
 }
 
 .common-title-dark {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
     font-size: var(--font-size-title);
 }
 
 .common-title-dark.small-padding {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 .common-title-dark span {
@@ -22,21 +22,26 @@
 }
 
 .common-title-light.small-padding {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 .common-link-gradient {
     transition: background-image 1s ease;
     color: var(--color-font-light);
-    font-size: 16px;
+    font-size: clamp(0.7rem, 2vw, 2rem);
     font-weight: 800;
     background-image: var(--gradient-primary-fallback);
     background-image: var(--gradient-primary);
-    padding: 10px 20px;
-    margin-top: 15px;
-    max-width: 200px;
+    padding: clamp(1rem, 1.3vw, 2rem) clamp(1.5rem, 2vw, 3rem);
+    margin-top: clamp(1rem, 2vw, 3rem);
+    max-width: 18.75rem;
     align-self: center;
     text-decoration: none;
+}
+@media(max-width: 1920px) {
+    .common-link-gradient {
+        max-width: 25rem;
+    }
 }
 
 .common-link-gradient:hover {
