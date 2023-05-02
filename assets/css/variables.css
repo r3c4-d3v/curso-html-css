@@ -38,5 +38,5 @@
     );
 
     /* Font size*/
-    --font-size-title: 30px;
+    --font-size-title: clamp(1rem, 2vw, 3rem);
 }

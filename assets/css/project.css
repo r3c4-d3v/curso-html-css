@@ -1,9 +1,47 @@
+#home .project-before.common-container-default {
+    padding: 3.75rem 5%;
+}
+
+#home .project-before .common-title-dark {
+    padding-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+    #home .project-before {
+        display: none;
+    }
+}
+
 #home .project {
     display: flex;
     width: 100%;
     max-width: 90%;
-    gap: 20px 40px;
-    padding-bottom: 40px;
+    gap: 1.25rem 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+@media (max-width: 1023px) {
+    #home .project {
+        flex-direction: column;
+        max-width: initial;
+        align-items: center;
+        gap: 0;
+    }
+
+    #home .project .common-title-dark {
+        align-self: flex-start;
+        padding-bottom: 1rem;
+        padding-left: 10%;
+        padding-top: 5rem;
+    }
+}
+@media (min-width: 1024px) {
+    #home .project .common-title-dark {
+        display: none;
+    }
+    #home .project .common-title-dark.small-padding {
+        display: initial;
+    }
 }
 
 #home .project .image {
@@ -11,13 +49,51 @@
     height: auto;
 }
 
+@media (max-width: 1023px) {
+    #home .project .image {
+        width: 90%;
+    }
+}
+
 #home .project .content {
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    padding-top: 10px;
+    padding-top: 0.625rem;
+}
+
+@media (max-width: 1023px) {
+    #home .project .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 80%;
+    }
+
+    #home .project .content .common-title-dark {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
 }
 
 #home .project .content .text {
     color: var(--color-font-light-grey);
-    font-size: 20px;
-    padding-bottom: 30px;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    padding-bottom: 1.875rem;
+}
+
+#home .project .content .common-link-gradient {
+    align-self: flex-end;
+}
+
+@media (max-width: 1023px) {
+    #home .project .content .text {
+        padding-bottom: 0;
+        text-align: justify;
+    }
+
+    #home .project .content .common-link-gradient {
+        align-self: center;
+    }
 }

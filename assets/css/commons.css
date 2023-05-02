@@ -4,7 +4,7 @@
 
 .common-title-dark {
     padding-bottom: 3.75rem;
-    font-size: var(--font-size-title);
+    font-size: clamp(2rem, 2vw, 4rem);
 }
 
 .common-title-dark.small-padding {
@@ -32,7 +32,7 @@
     font-weight: 800;
     background-image: var(--gradient-primary-fallback);
     background-image: var(--gradient-primary);
-    padding: clamp(1rem, 1.3vw, 2rem) clamp(1.5rem, 2vw, 3rem);
+    padding: clamp(0.7rem, 1vw, 1.4rem) clamp(1.5rem, 2vw, 3rem);
     margin-top: clamp(1rem, 2vw, 3rem);
     max-width: 18.75rem;
     align-self: center;

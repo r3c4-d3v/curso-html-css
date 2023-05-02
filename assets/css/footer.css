@@ -1,23 +1,35 @@
 #home .footer-container {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     color: var(--color-font-light-grey);
 }
 
-#home .footer-container {
+@media(max-width: 1023px) {
+    #home .footer-container {
+        flex-direction: column;
+    }
+}
 
+#home .footer-container .left-container {
+    width: 90%;
+}
+
+@media(max-width: 767px) {
+    #home .footer-container .right-container {
+        flex-direction: column;
+    }
 }
 
 #home .footer-container .logo {
-    font-size: 65px;
+    font-size: 4.063rem;
     text-transform: capitalize;
     font-weight: 800;
     color: var(--color-font-pink);
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
 }
 
 #home .footer-container .logo span {
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 300;
 }
 
@@ -34,16 +46,16 @@
 }
 
 #home .footer-container .text {
-    line-height: 30px;
-    font-size: 14px;
+    line-height: 1.875rem;
+    font-size: 0.875rem;
 }
 
 #home .footer-container .our-story .text {
-    padding-bottom: 18px;
+    padding-bottom: 1.125rem;
 }
 
 #home .footer-container .category  {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 }
 
 #home .footer-container .social-post {
@@ -54,16 +66,16 @@
 
 #home .footer-container .social-post .title {
     color: var(--color-font-pink);
-    padding-bottom: 7px;
+    padding-bottom: 0.438rem;
 }
 
 #home .footer-container .right-container {
     display: flex;
-    gap: 15px;
+    gap: 0.938rem;
 }
 
 #home .footer-container .right-container .author {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
 }
 
 #home .footer-container .our-story {
@@ -85,24 +97,24 @@
 
 #home .footer-container .our-story .link i {
     color: var(--color-font-pink);
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #home .footer-container .our-story .contact {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 #home .footer-container .our-story .contact .link {
     display: flex;
-    gap: 5px;
+    gap: 0.313rem;
     align-items: center;
 }
 
 
 #home .footer-container .our-story .social-medias {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
 }

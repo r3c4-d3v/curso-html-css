@@ -45,7 +45,7 @@
 #home .header .menu {
     display: flex;
     align-items: center;
-    font-size: clamp(0.8rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.2vw, 2rem);
 }
 @media(max-width: 1023px) {
     #home .header .menu {
