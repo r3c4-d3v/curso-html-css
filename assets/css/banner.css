@@ -31,7 +31,7 @@
 
 #home .banner .subtitle {
     color: var(--color-font-light);
-    font-size: clamp(1.2rem, 2vw, 3rem);
+    font-size: clamp(1.7rem, 2vw, 3rem);
     font-weight: 600;
     text-shadow: var(--color-font-grey) 1px 0 0.625rem;
 }

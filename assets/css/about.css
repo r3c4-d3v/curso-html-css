@@ -14,70 +14,95 @@
 }
 
 #home .about-container .description {
-    padding: 70px 0 40px 0;
-    font-size: 25px;
+    padding: clamp(1rem, 4vw, 4.375rem) 0 2.5rem 0;
+    font-size: 1.563rem;
     line-height: 1.6;
 }
 
 #home .about-container .link {
-    padding: 12px 35px;
+    padding: 0.75rem 2.188rem;
     border: 2px solid var(--color-font-light);
     text-decoration: none;
-    border-radius: 50px;
-    color: inherit;
+    border-radius: 3.125rem;
+    color: #ffffff;
     align-self: flex-end;
     font-weight: 800;
     text-transform: capitalize;
+    background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease, color 0.4s ease;
+}
+
+#home .about-container .link:hover {
+    background-size: 100% 100%;
+    color: var(--color-font-pink);
 }
 
 #home .about-cards-container {
-    position: relative;
     display: flex;
     width: 100%;
-    padding: 0 7.5% 60px 7.5%;
+    padding: 0 7.5% 3.75rem 7.5%;
     background-color: var(--color-background-light);
 }
 
-#home .about-card {
+@media (max-width: 767px) {
+    #home .about-cards-container {
+        flex-direction: column;
+        padding-top: 1rem;
+        row-gap: 0.5rem;
+    }
+}
+
+#home .about-cards-container .about-card {
+    position: relative;
     user-select: none;
-    padding: 70px 55px 70px 30px;
+    padding: clamp(2rem, 4vw, 4.375rem) 1.875rem;
     color: var(--color-font-light-grey);
     transition: all 0.3s ease-in;
 }
 
-#home .about-card:hover {
+@media (max-width: 767px) {
+    #home .about-cards-container .about-card {
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 0.750rem;
+    }
+}
+
+#home .about-cards-container .about-card:hover {
     background-image: var(--gradient-primary);
     color: var(--color-font-light);
 }
 
-#home .about-card:hover .number-decoration {
+#home .about-cards-container .about-card:hover .number-decoration {
     visibility: hidden;
 }
 
-#home .about-card:hover .number {
+#home .about-cards-container .about-card:hover .number {
     visibility: visible;
 }
 
-#home .about-card .number-decoration {
+#home .about-cards-container .about-card .number-decoration {
     position: absolute;
     top: 50%;
-    font-size: 100px;
+    font-size: 6.25rem;
     font-weight: 800;
     color: #ffe8eb;
 }
 
-#home .about-card .number {
+#home .about-cards-container .about-card .number {
     visibility: hidden;
-    font-size: 60px;
+    font-size: clamp(2.75rem, 4vw, 3.75rem);
     font-weight: 800;
 }
 
-#home .about-card .title {
+#home .about-cards-container .about-card .title {
     text-transform: capitalize;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
-#home .about-card .description {
+#home .about-cards-container .about-card .description {
     letter-spacing: -1px;
     z-index: 1;
     position: relative;
